@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ba1.css"> <!-- Link to your CSS file if separated -->
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div class="splash-screen">
+        <div>
+            <h1>DIYA'S BEAUTY PARLOUR <img src="C:\Users\abina\OneDrive\Desktop\webdev\download-removebg-preview.png" alt="Beauty Parlour Logo" /></h1>
+            <h4>(Beauty and Spa)</h4>
+        </div>
+        <div class="flower-icon" style="top: 10%; left: 10%;">🌺</div>
+        <div class="flower-icon" style="top: 10%; left: 30%;">🌺</div>
+        <div class="flower-icon" style="top: 13%; left: 70%;">🌺</div>
+        <div class="flower-icon" style="top: 35%; left: 50%;">🌺</div>
+        <div class="flower-icon" style="top: 10%; left: 85%;">🌺</div>
+        <div class="flower-icon" style="top: 84%; left: 80%;">🌺</div>
+        <div class="flower-icon" style="top: 6%; left: 48%;">🌺</div>
+        <div class="flower-icon" style="top: 30%; left: 20%;">🌺</div>
+        <div class="flower-icon" style="top: 50%; left: 10%;">🌺</div>
+        <div class="flower-icon" style="top: 70%; left: 30%;">🌺</div>
+        <div class="flower-icon" style="top: 85%; left: 10%;">🌺</div>
+        <div class="flower-icon" style="top: 95%; left: 70%;">🌺</div>
+        <div class="flower-icon" style="top: 95%; left: 40%;">🌺</div>
+        <div class="flower-icon" style="top: 50%; left: 90%;">🌺</div>
+        <div class="flower-icon" style="top: 75%; left: 50%;">🌺</div>
+    </div>
+        <!-- Flower Icons (if desired, they can also be managed through JavaScript) -->
+    </div>
+
+    <header>
+        <img class="man" src="C:\Users\abina\OneDrive\Desktop\webdev\menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="Menu Icon" />
+        <h1>DIYA'S BEAUTY PARLOUR <img class="ava" src="C:\Users\abina\OneDrive\Desktop\webdev\download-removebg-preview.png" alt="Beauty Parlour Logo" /></h1>
+    </header>
+
+    <h2>WELCOME TO OUR WEBSITE!</h2>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="C:\Users\abina\OneDrive\Desktop\webdev\beautyparlour\R.jpg" alt="Makeup" />
+            <button>MAKEUP</button>
+        </div>
+        <div class="grid-item">
+            <img src="C:\Users\abina\OneDrive\Desktop\webdev\beautyparlour\shutterstock_178521473-scaled.webp" alt="Manicure" />
+            <button>MANICURE</button>
+        </div>
+        <div class="grid-item">
+            <img src="C:\Users\abina\OneDrive\Desktop\webdev\beautyparlour\OIP.jpg" alt="Threading" />
+            <button>THREADING</button>
+        </div>
+        <div class="grid-item">
+            <img src="C:\Users\abina\OneDrive\Desktop\webdev\beautyparlour\FSH_86487979-thinkstock_aspect16x9.jpg" alt="Facials" />
+            <button>FACIALS</button>
+        </div>
+        <div class="grid-item">
+            <img src="C:\Users\abina\OneDrive\Desktop\webdev\Snapinsta.app_378895946_1434852693742244_8858959512331622695_n_1080.webp" alt="Saree Draping" />
+            <button>SAREE DRAPING</button>
+        </div>
+        <div class="grid-item">
+            <img src="C:\Users\abina\OneDrive\Desktop\webdev\hair-colour-4 (1).jpg" alt="Hair Colouring" />
+            <button>HAIR COLOURING</button>
+        </div>
+    </div>
+
+    <footer>
+        <p><a href="C:\Users\abina\OneDrive\Desktop\webdev\beautyparlour\contact.html">CONTACT US</a><br />2024 DIYA'S BEAUTY PARLOUR. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to hide splash screen after 3 seconds
+        window.onload = function() {
+            setTimeout(function() {
+                document.querySelector('.splash-screen').classList.add('hidden');
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            }, 3000); // 3000 milliseconds = 3 seconds
+        };
+    </script>
+</body>
+</html>
