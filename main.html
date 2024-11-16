@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .studel {
+            border: 2px solid;
+            padding: 20px;
+            background-color: aquamarine;
+            width: fit-content;
+        }
+        .mai, .mai + input {
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 10px;
+            padding: 5px;
+            border: 1px solid black;
+        }
+        .mai { width: 100px; margin-right: 10px; background-color: pink; }
+        .buttn {
+            margin-top: 20px;
+            width: 300px;
+            background-color: sandybrown;
+            border: 2px solid black;
+            border-radius: 2px;
+        }
+        .delete-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Student Form</title>
+</head>
+<body>
+    <h1>Student Form</h1>
+    <div class="studel">
+        <div><div class="mai">Name</div><input type="text" name="input" data-label="Name"></div>
+        <div><div class="mai">Age</div><input type="number" name="input" data-label="Age"></div>
+        <div><div class="mai">Gender</div><input type="text" name="input" data-label="Gender"></div>
+        <div><div class="mai">Course</div><input type="text" name="input" data-label="Course"></div>
+        <div><div class="mai">E-mail</div><input type="email" name="input" data-label="E-mail"></div>
+        <div><button class="buttn" onclick="addRow()">Save</button></div>
+    </div>
+    <div style="margin-top: 20px;">
+        <table border="1" id="studentTable">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Course</th>
+                <th>E-mail</th>
+                <th>Clear</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function addRow() {
+            // Get input values
+            var inputs = document.querySelectorAll("input[name='input']");
+            var table = document.getElementById("studentTable");
+            var row = table.insertRow(); // Insert a new row at the end of the table
+
+            // Loop through inputs and add values to new row
+            inputs.forEach((input) => {
+                var cell = row.insertCell(); // Create a new cell
+                cell.textContent = input.value; // Set cell text to input value
+                input.value = ""; // Clear input for the next entry
+            });
+
+            // Add Clear button to the last cell
+            var clearCell = row.insertCell();
+            var clearButton = document.createElement("button");
+            clearButton.textContent = "Clear";
+            clearButton.className = "delete-btn";
+            clearButton.onclick = function () {
+                table.deleteRow(row.rowIndex); // Remove the row when "Clear" is clicked
+            };
+            clearCell.appendChild(clearButton);
+        }
+    </script>
+</body>
+</html>
