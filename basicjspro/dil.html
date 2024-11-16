@@ -1,0 +1,26 @@
+<input id="input">
+<button onclick="add()">Add</button>
+<ul id="list">
+</ul>
+<script>
+        var ul=document.getElementById("list")
+        var ud=document.getElementById("input")
+        var us=document.getElementById("del")
+
+
+        function add(){
+          var listit=document.createElement("li")
+          var listat=document.createElement("button")
+          listat.setAttribute("onclick","rem(event)")
+          listat.innerHTML="Delete"
+          listit.textContent=ud.value
+          ul.appendChild(listit)
+          ul.appendChild(listat)
+          listit.insertAdjacentElement("beforeend",listat)
+          
+    }
+    function rem(event){
+         event.target.parentElement.remove()
+    }
+</script>
+
